@@ -6,4 +6,4 @@ before_install:
   - docker build -t sekhar92/simple-react -f Dockerfile.dev .
 
 script:
-  - docker run sekhar92/simple-react npm run test -- --coverage
+  - docker run -e CI=true sekhar92/simple-react npm run test
