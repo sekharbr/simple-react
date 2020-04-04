@@ -11,7 +11,7 @@ function App() {
           Welcome to sample react project.
         </p>
         <p>
-          Hi there !!
+          Hi there I changed to feature branch!!
         </p>
         <a
           className="App-link"

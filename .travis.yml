@@ -7,3 +7,16 @@ before_install:
 
 script:
   - docker run -e CI=true sekhar92/simple-react npm run test
+
+deploy:
+  edge: true
+  provider: elasticbeanstalk
+  region: "ap-south-1"
+  app: "simple-react"
+  env: "SimpleReact-env"
+  bucket_name: "elasticbeanstalk-ap-south-1-463935914557"
+  bucket_path: "simple-react"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  seceret_access_key: $AWS_SECERT_KEY
